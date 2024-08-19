@@ -1,5 +1,5 @@
 fun main() {
-    ex5()
+    ex6()
 }
 
 fun ex1(){
@@ -52,4 +52,24 @@ fun ex5(){
         }
     }
     print("O número $n aparece $qtd veze(s) no array")
+}
+
+fun ex6(){
+    val vetorNotas = FloatArray(5)
+    val vetorPeso = FloatArray(5)
+    var mediaPonderada = 0.0
+    var div = 0.0
+
+    for (i in vetorNotas.indices){
+        vetorNotas[i] = readln().toFloat()
+    }
+    for (i in vetorPeso.indices){
+        vetorPeso[i] = readln().toFloat()
+    }
+    for (i in 0..4){
+        mediaPonderada += vetorNotas[i] * vetorPeso[i]
+        div += vetorPeso[i]
+    }
+    mediaPonderada /= div
+    print("Media ponderada: %.2f " .format(mediaPonderada))
 }
