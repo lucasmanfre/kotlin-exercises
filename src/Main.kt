@@ -1,5 +1,5 @@
 fun main() {
-    ex7()
+    ex8()
 }
 
 fun ex1(){
@@ -94,5 +94,28 @@ fun ex7(){
     }
     else{
         print("Os vetores não são iguais")
+    }
+}
+
+fun ex8(){
+    val vetorA = IntArray(5)
+    val vetorB = IntArray(5)
+    val vetorC = IntArray(10)
+    for (i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+    }
+    for (i in vetorB.indices){
+        vetorB[i] = readln().toInt()
+    }
+    for (i in vetorC.indices){
+        if(i < 5) {
+            vetorC[i] = vetorA[i]
+        }
+        else{
+            vetorC[i] = vetorB[i-5]
+        }
+    }
+    for(i in vetorC.indices){
+        print("${vetorC[i]}, ")
     }
 }
