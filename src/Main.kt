@@ -1,5 +1,5 @@
 fun main() {
-    ex4()
+    ex5()
 }
 
 fun ex1(){
@@ -36,4 +36,20 @@ fun ex4(){
             vetor[i] < n -> println("${vetor[i]} é menor que $n")
         }
     }
+}
+
+fun ex5(){
+    val vetor = IntArray(5)
+    var qtd = 0
+    for (i in vetor.indices){
+        vetor[i] = readln().toInt()
+    }
+    print("Digite um numero: ")
+    val n = readln().toInt()
+    for (i in vetor.indices){
+        when{
+            vetor[i]==n -> qtd++
+        }
+    }
+    print("O número $n aparece $qtd veze(s) no array")
 }
