@@ -1,5 +1,5 @@
 fun main() {
-    ex6()
+    ex7()
 }
 
 fun ex1(){
@@ -72,4 +72,27 @@ fun ex6(){
     }
     mediaPonderada /= div
     print("Media ponderada: %.2f " .format(mediaPonderada))
+}
+
+fun ex7(){
+    val vetorA = IntArray(5)
+    val vetorB = IntArray(5)
+    var validacao = true
+    for (i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+    }
+    for (i in vetorB.indices){
+        vetorB[i] = readln().toInt()
+    }
+    for (i in 0..4){
+        if(vetorA[i] != vetorB[i]){
+            validacao = false
+        }
+    }
+    if(validacao){
+        print("Os vetores são iguais")
+    }
+    else{
+        print("Os vetores não são iguais")
+    }
 }
