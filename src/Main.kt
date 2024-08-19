@@ -1,5 +1,5 @@
 fun main() {
-    ex1()
+    ex4()
 }
 
 fun ex1(){
@@ -22,5 +22,18 @@ fun ex1(){
             println("O numero ${vetor[i]} está na média")
         }
     }
+}
 
+fun ex4(){
+    val vetor = IntArray(5)
+    print("Digite um numero: ")
+    val n = readln().toInt()
+    for (i in vetor.indices){
+        vetor[i] = readln().toInt()
+    }
+    for(i in vetor.indices){
+        when{
+            vetor[i] < n -> println("${vetor[i]} é menor que $n")
+        }
+    }
 }
