@@ -1,5 +1,5 @@
 fun main() {
-    ex3()
+    ex10()
 }
 
 fun ex1(){
@@ -172,4 +172,18 @@ fun ex9 (){
         print("${vetorC[i]}, ")
     }
 
+}
+
+fun ex10(){
+    val vetorA = IntArray(5)
+    val vetorB = IntArray(5)
+    var n = 4
+    for(i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+        vetorB[n] = vetorA[i]
+        n--
+    }
+    for (i in vetorB.indices){
+        print("${vetorB[i]}, ")
+    }
 }
