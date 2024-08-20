@@ -1,5 +1,5 @@
 fun main() {
-    ex10()
+    ex11()
 }
 
 fun ex1(){
@@ -186,4 +186,18 @@ fun ex10(){
     for (i in vetorB.indices){
         print("${vetorB[i]}, ")
     }
+}
+
+fun ex11(){
+    val vetorA = IntArray(5)
+    val vetorB = IntArray(5)
+    var soma = 0
+    for (i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+    }
+    for(i in vetorB.indices){
+        vetorB[i] = readln().toInt()
+        soma += vetorA[i] * vetorB[i]
+    }
+    println("$soma")
 }
