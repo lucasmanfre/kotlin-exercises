@@ -1,5 +1,5 @@
 fun main() {
-    ex8()
+    ex9()
 }
 
 fun ex1(){
@@ -118,4 +118,24 @@ fun ex8(){
     for(i in vetorC.indices){
         print("${vetorC[i]}, ")
     }
+}
+
+fun ex9 (){
+    val vetorA = IntArray(5)
+    val vetorB = IntArray(5)
+    val vetorC = IntArray(5)
+    for(i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+    }
+    for(i in vetorB.indices){
+        vetorB[i] = readln().toInt()
+    }
+    for(i in vetorC.indices){
+        when{
+            i%2 == 0 -> vetorC[i] = vetorA[i]
+            else -> vetorC[i] = vetorB[i]
+        }
+        print("${vetorC[i]}, ")
+    }
+
 }
