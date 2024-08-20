@@ -1,5 +1,5 @@
 fun main() {
-    ex9()
+    ex2()
 }
 
 fun ex1(){
@@ -23,6 +23,27 @@ fun ex1(){
         }
     }
 }
+
+fun ex2(){
+    print("Digite o tamanho do vetor: ")
+    val n = readln().toInt()
+    val vetor = IntArray(n)
+    for (i in vetor.indices){
+        vetor[i] = readln().toInt()
+    }
+    for (i in vetor.indices){
+        println("${vetor[i]}, ")
+    }
+    for (i in vetor.indices){
+        when{
+            vetor[i] > 0 -> println("${vetor[i]} - maior que zero")
+            vetor[i] < 0 -> println("${vetor[i]} - menor que zero")
+            else -> println("${vetor[i]} - igual a zero")
+        }
+    }
+
+}
+
 
 fun ex4(){
     val vetor = IntArray(5)
