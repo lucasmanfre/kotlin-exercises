@@ -1,5 +1,5 @@
 fun main() {
-    ex11()
+    ex12()
 }
 
 fun ex1(){
@@ -200,4 +200,18 @@ fun ex11(){
         soma += vetorA[i] * vetorB[i]
     }
     println("$soma")
+}
+
+fun ex12(){
+    val vetor = IntArray(12)
+    var n = 1
+    for(i in vetor.indices){
+        vetor[i] = readln().toInt()
+    }
+    for(i in vetor.indices){
+        when{
+            vetor[i] > 0 && vetor[i]%2 == 0 -> n *= vetor[i]
+        }
+    }
+    print("$n")
 }
