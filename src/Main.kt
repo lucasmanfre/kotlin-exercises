@@ -1,5 +1,5 @@
 fun main() {
-    ex12()
+    ex13()
 }
 
 fun ex1(){
@@ -214,4 +214,19 @@ fun ex12(){
         }
     }
     print("$n")
+}
+
+fun ex13(){
+    val n = readln().toInt()
+    var t1 = 0
+    var t2 = 1
+    var cont = 2
+    println("$t2")
+    while(cont <= n){
+        val t3 = t1 + t2
+        println("$t3")
+        t1 = t2
+        t2 = t3
+        cont++
+    }
 }
