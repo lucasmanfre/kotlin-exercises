@@ -1,5 +1,5 @@
 fun main() {
-    ex2()
+    ex3()
 }
 
 fun ex1(){
@@ -44,6 +44,19 @@ fun ex2(){
 
 }
 
+fun ex3(){
+    print("Digite o tamanho do vetor: ")
+    val n = readln().toInt()
+    val vetorA = IntArray(n)
+    val vetorB = IntArray(n)
+    for(i in vetorA.indices){
+        vetorA[i] = readln().toInt()
+        vetorB[i] = vetorA[i] * 2
+    }
+    for(i in vetorB.indices){
+        print("${vetorB[i]}, ")
+    }
+}
 
 fun ex4(){
     val vetor = IntArray(5)
